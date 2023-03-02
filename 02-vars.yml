@@ -42,23 +42,23 @@
       ansible.builtin.shell: uptime
       register: out
 
- - name: Print out
+- name: Print out
       ansible.builtin.debug:
         msg: "{{ out }}"
 
 
- - name: Declare a variable
+- name: Declare a variable
       ansible.builtin.set_fact:
         status: "{{ out.rc }}"
 
- - name: Print Status
+- name: Print Status
       ansible.builtin.debug:
         msg: "{{ status }}"
- - name: Declare a variable
+- name: Declare a variable
       ansible.builtin.set_fact:
         status: "{{ out.rc }}"
 
- - name: Print Status
+- name: Print Status
       ansible.builtin.debug:
         msg: "{{ status }}"
 
