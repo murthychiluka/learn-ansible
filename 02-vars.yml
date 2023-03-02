@@ -8,10 +8,10 @@
         msg: URL = {{ URL }}
 
  - name: Play Variables from file
-  hosts: localhost
-  var_files:
-    - var.yml
-  tasks:
+   hosts: localhost
+   var_files:
+     - var.yml
+   tasks:
     - name: Print Play Variable from file
       ansible.builtin.debug:
         msg: URL = {{ URL }}
