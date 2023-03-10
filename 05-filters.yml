@@ -1,5 +1,5 @@
 - name : filters
-  hosts: local host
+  hosts: localhost
   tasks:
     name: filters
     debug:
