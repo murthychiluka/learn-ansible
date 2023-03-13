@@ -9,10 +9,10 @@
          - banana
          - apple    
 
-     - name: print fruit name with quantity
-       debug:
+    - name: print fruit name with quantity
+      debug:
          msg: fruit name - {{ item.name }} , quantity - {{ item.quantity }} 
-       loop:
+      loop:
            - { name: "orange" , quantity: 100 }  
            - { name: "banana" , quantity: 100 } 
            - { name: "apple" , quantity: 100 }      
