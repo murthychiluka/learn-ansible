@@ -4,6 +4,6 @@
     - name: print my name
 
       debug:
-        msg: echo "my name is Murthy"
+        msg: my name is Murthy
 
 
