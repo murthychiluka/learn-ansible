@@ -1,2 +1,7 @@
 - name: print my name
-  debug: echo "my name is Murthy"
+  hosts: all
+  tasks:
+    name: print my name
+
+    debug:
+      msg: echo "my name is Murthy"
