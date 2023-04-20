@@ -6,3 +6,21 @@
     - name: Print Hello
       ansible.builtin.debug:
         msg: Hello World Testing !!
+
+
+        project
+|-- src
+|   |-- main
+|   |   |-- java
+|   |   |   `-- (project's Java source files)
+|   |   |-- resources
+|   |   |   `-- (project's non-Java resources, such as configuration files)
+|   |-- test
+|   |   |-- java
+|   |   |   `-- (project's test Java source files)
+|   |   |-- resources
+|   |   |   `-- (project's test non-Java resources)
+|-- target
+|   `-- (compiled output files and other build artifacts)
+|-- pom.xml (project configuration file)
+
