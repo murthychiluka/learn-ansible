@@ -24,3 +24,17 @@
 |   `-- (compiled output files and other build artifacts)
 |-- pom.xml (project configuration file)
 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: my-image:latest
+    env:
+    - name: ENV_VAR1
+      value: "foo"
+    - name: ENV_VAR2
+      value: "bar"
+    command: ["my-command"]
