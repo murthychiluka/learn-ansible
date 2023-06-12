@@ -1,0 +1,6 @@
+- name: Murthy
+  hosts: all
+  tasks:
+    - name: print Hello
+      ansible.builtin.debug:
+        msg: I love Germany
