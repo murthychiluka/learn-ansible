@@ -46,3 +46,33 @@ spec:
         cpu: "500m"
     command: ["my-command"]
 
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowUserAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::123456789012:user/example-user"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": "arn:aws:s3:::example-bucket/*"
+        },
+        {
+            "Sid": "DenyOtherAccess",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::example-bucket/*",
+            "Condition": {
+                "StringNotEquals": {
+                    "aws:userId": "123456789012:user/example-user"
+                }
+            }
+        }
+    ]
+}
