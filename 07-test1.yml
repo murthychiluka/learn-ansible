@@ -6,3 +6,22 @@
       ansible.builtin.yum:
         name: nginx
       state: present
+
+---
+- name: Deploy Web Application
+  hosts: web_servers
+  tasks:
+    - name: Copy application code
+      copy:
+        src: /path/to/app/code
+        dest: /var/www/myapp
+
+    - name: Install dependencies
+      command: npm install
+      args:
+        chdir: /var/www/myapp
+
+    - name: Start application service
+      systemd:
+        name: myapp
+        state: started
