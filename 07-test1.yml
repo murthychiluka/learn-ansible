@@ -25,3 +25,7 @@
       systemd:
         name: myapp
         state: started
+---
+[defaults]
+inventory = /path/to/inventory_file
+remote_user = your_username
